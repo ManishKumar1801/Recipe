@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.recipe.databinding.ListItemBinding
 import com.example.recipe.models.Results
 
-class MyAdapter(val context: Activity, val recipesList: ArrayList<Results>):
+class MyAdapter(val context: Context, val recipesList: ArrayList<Results>):
     RecyclerView.Adapter<MyAdapter.MyViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -27,7 +27,10 @@ class MyAdapter(val context: Activity, val recipesList: ArrayList<Results>):
                 .centerCrop()
                 .placeholder(R.drawable.ic_launcher_background)
                 .into(image1)
-
+             item.setOnClickListener{
+                val intent=Intent(context,DetailActivity::class.java)
+                 context.
+             }
 
         }
     }
