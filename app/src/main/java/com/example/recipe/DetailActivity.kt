@@ -32,11 +32,11 @@ class DetailActivity : AppCompatActivity() {
 //                adapter2=MyAdapter2(this@DetailActivity,list)
 //                binding.recyclerView.adapter=adapter2
 //                binding.recyclerView.layoutManager= LinearLayoutManager(this@DetailActivity)
-                Log.d("finddata",response.body().toString())
+
             }
 
             override fun onFailure(call: Call<Detail?>, t: Throwable) {
-                TODO("Not yet implemented")
+                Log.d("finddata",t.toString())
             }
         })
 

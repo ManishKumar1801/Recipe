@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import android.content.Context
+import android.content.Intent
 import com.example.recipe.databinding.ListItemBinding
 import com.example.recipe.models.Results
 
@@ -29,7 +31,7 @@ class MyAdapter(val context: Context, val recipesList: ArrayList<Results>):
                 .into(image1)
              item.setOnClickListener{
                 val intent=Intent(context,DetailActivity::class.java)
-                 context.
+                 context.startActivity(intent)
              }
 
         }
